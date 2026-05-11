@@ -1,18 +1,13 @@
 import Image from "next/image";
+import ProductList from "./components/productList/productlist";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/featured.png"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-      </main>
+    <div className="">
+      <div className="relative aspect-[3/1] mb-12">
+        <Image src="/featured.png" alt="Featured Product" fill />
+      </div>
+      <ProductList />
     </div>
   );
 }
